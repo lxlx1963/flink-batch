@@ -1,14 +1,11 @@
 package batch.face;
 
 import com.alibaba.fastjson.JSON;
-import com.xinchao.common.constant.DateConstant;
-import com.xinchao.common.util.DateUtils;
-import com.xinchao.flink.constant.ApplicationPropertiesContstant;
-import com.xinchao.flink.constant.WaringMessageConstant;
-import com.xinchao.flink.model.FaceData;
-import com.xinchao.flink.model.dto.FaceDataDeviceSexDTO;
-import com.xinchao.flink.util.GenderUtils;
-import com.xinchao.flink.util.PropertiesUtils;
+import constant.ApplicationPropertiesContstant;
+import constant.DateConstant;
+import constant.WaringMessageConstant;
+import model.FaceData;
+import model.dto.FaceDataDeviceSexDTO;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.io.jdbc.JDBCInputFormat;
@@ -21,6 +18,9 @@ import org.apache.flink.table.api.java.BatchTableEnvironment;
 import org.apache.flink.types.Row;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import util.DateUtils;
+import util.GenderUtils;
+import util.PropertiesUtils;
 
 /**
  * FaceDataDeviceSexJob

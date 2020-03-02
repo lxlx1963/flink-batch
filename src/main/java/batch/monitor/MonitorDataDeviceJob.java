@@ -1,15 +1,9 @@
 package batch.monitor;
 
 import com.alibaba.fastjson.JSON;
-import com.xinchao.common.constant.BusinessConstant;
-import com.xinchao.common.constant.DateConstant;
-import com.xinchao.common.constant.ElasticsearchConstant;
-import com.xinchao.common.util.DateUtils;
-import com.xinchao.flink.constant.ApplicationPropertiesContstant;
-import com.xinchao.flink.constant.WaringMessageConstant;
-import com.xinchao.flink.model.MonitorData;
-import com.xinchao.flink.model.dto.MonitorDataDeviceDTO;
-import com.xinchao.flink.util.PropertiesUtils;
+import constant.*;
+import model.MonitorData;
+import model.dto.MonitorDataDeviceDTO;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.flink.api.common.typeinfo.BasicTypeInfo;
 import org.apache.flink.api.common.typeinfo.TypeInformation;
@@ -24,6 +18,8 @@ import org.apache.flink.table.api.java.BatchTableEnvironment;
 import org.apache.flink.types.Row;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import util.DateUtils;
+import util.PropertiesUtils;
 
 /**
  * 设备维度清洗监播数据
